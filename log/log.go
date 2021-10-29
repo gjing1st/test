@@ -14,9 +14,10 @@ import (
 // 用于应用初始化。
 func initLog() {
 	timeString := time.Now()
-	path :="./" + timeString.Format("2006-01") + "/" + timeString.Format("2006-01-02")
+	path :="D:\\project\\go\\test\\github-test\\test\\log/" + timeString.Format("2006-01") + "/" + timeString.Format("2006-01-02")
 	//设置日志路径，自动创建目录
 	glog.SetPath(path)
+	fmt.Println("------",path)
 	//开启异步日志记录
 	glog.SetAsync(true)
 	//关闭控制台输出
