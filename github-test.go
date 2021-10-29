@@ -1,5 +1,5 @@
 
-package github_test
+package test
 
 import "fmt"
 
