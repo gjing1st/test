@@ -5,16 +5,16 @@
 package log
 
 import (
-	//"github.com/gogf/gf/frame/g"
 	"github.com/gogf/gf/os/glog"
 	"strings"
 	"time"
+	"fmt"
 )
 
 // 用于应用初始化。
 func initLog() {
 	timeString := time.Now()
-	path :=  "./" + timeString.Format("2006-01") + "/" + timeString.Format("2006-01-02")
+	path :="./" + timeString.Format("2006-01") + "/" + timeString.Format("2006-01-02")
 	//设置日志路径，自动创建目录
 	glog.SetPath(path)
 	//开启异步日志记录
@@ -44,6 +44,7 @@ func LogFile(fileName string, v ...interface{}) {
 		fileName = "common"
 	}
 
+	fmt.Println("------",v)
 	//使用回溯值记录调用日志文件名和行号
 	glog.Skip(1).Line(true).File(fileName).Println(v)
 }
