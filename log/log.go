@@ -5,7 +5,7 @@
 package log
 
 import (
-	"github.com/gogf/gf/frame/g"
+	//"github.com/gogf/gf/frame/g"
 	"github.com/gogf/gf/os/glog"
 	"strings"
 	"time"
@@ -14,7 +14,7 @@ import (
 // 用于应用初始化。
 func initLog() {
 	timeString := time.Now()
-	path := g.Cfg().GetString("logger.Path") + "/" + timeString.Format("2006-01") + "/" + timeString.Format("2006-01-02")
+	path :=  "./" + timeString.Format("2006-01") + "/" + timeString.Format("2006-01-02")
 	//设置日志路径，自动创建目录
 	glog.SetPath(path)
 	//开启异步日志记录
