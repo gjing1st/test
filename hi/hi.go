@@ -9,5 +9,6 @@ package hi
 import "fmt"
 
 func Print()  {
+
 	fmt.Println("hi,我来自github")
 }
